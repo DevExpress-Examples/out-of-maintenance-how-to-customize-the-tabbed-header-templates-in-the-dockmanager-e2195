@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/docking" 
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/docking/themekeys" 
+    xmlns:ve="http://schemas.devexpress.com/winfx/2008/xaml/docking/visualelements">
+
+    <!-- Brushes -->
+    <SolidColorBrush x:Key="{dxt:DockPaneElementsThemeKey ResourceKey=BorderBrush}" Color="#FFA7C48E" />
+    <SolidColorBrush x:Key="{dxt:DockPaneElementsThemeKey ResourceKey=CaptionActiveBackground}" Color="#FFCFE9B8" />
+    <SolidColorBrush x:Key="{dxt:DockPaneElementsThemeKey ResourceKey=CaptionNormalBackground}" Color="#FFDAEEC9" />
+    <SolidColorBrush x:Key="{dxt:DockPaneElementsThemeKey ResourceKey=CaptionActiveForeground}" Color="#FF4C8229" />
+    <SolidColorBrush x:Key="{dxt:DockPaneElementsThemeKey ResourceKey=CaptionNormalForeground}" Color="#FF849F71" />
+    <SolidColorBrush x:Key="{dxt:DockPaneElementsThemeKey ResourceKey=Background}" Color="#FFEFFFE3" />
+    <!-- Header -->
+    <DataTemplate x:Key="{dxt:DockPaneElementsThemeKey ResourceKey=Header}">
+        <Border Width="Auto" Height="Auto" Padding="1,1,1,0" CornerRadius="1,1,0,0" Background="#FFEFFFE3">
+            <Border x:Name="PART_CaptionBackground" Width="Auto" Height="Auto" SnapsToDevicePixels="True" ve:DockPane.HitTestType="Header" Background="#FFDAEEC9" CornerRadius="1,1,0,0">
+                <Grid Width="Auto" Height="Auto">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <ve:CaptionControl x:Name="PART_Caption" Margin="4,2,4,2" Foreground="#FF849F71" HorizontalAlignment="Left" Grid.Column="0" />
+                    <ve:PanelControlBoxControl x:Name="PART_ControlBox"
+                            LayoutItem="{Binding}"
+							Margin="0,0,1,0"
+							Width="Auto"
+							Grid.Column="1"
+							PinButtonTemplate="{DynamicResource {dxt:DockPaneElementsThemeKey ResourceKey=PinButton}}"
+							CloseButtonTemplate="{DynamicResource {dxt:DockPaneElementsThemeKey ResourceKey=CloseButton}}" />
+                </Grid>
+            </Border>
+        </Border>
+    </DataTemplate>
+</ResourceDictionary>
