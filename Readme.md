@@ -1,3 +1,11 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [DockPane.xaml](./CS/CustomTheme/DockPane.xaml) (VB: [DockPane.xaml](./VB/CustomTheme/DockPane.xaml))
+* [TabbedPane.xaml](./CS/CustomTheme/TabbedPane.xaml) (VB: [TabbedPane.xaml](./VB/CustomTheme/TabbedPane.xaml))
+* [Window1.xaml](./CS/CustomTheme/Window1.xaml) (VB: [Window1.xaml.vb](./VB/CustomTheme/Window1.xaml.vb))
+* [Window1.xaml.cs](./CS/CustomTheme/Window1.xaml.cs) (VB: [Window1.xaml.vb](./VB/CustomTheme/Window1.xaml.vb))
+<!-- default file list end -->
 # How to customize the tabbed header templates in the DockManager
 
 
